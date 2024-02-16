@@ -34,7 +34,7 @@ class _EMIState extends State<EMI> {
             body: Container(
               height: 200,
               width: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.yellow,
               ),
             ),
