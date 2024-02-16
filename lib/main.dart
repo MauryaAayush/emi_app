@@ -25,7 +25,7 @@ class _EMIState extends State<EMI> {
       debugShowCheckedModeBanner: false,
           home: Scaffold(
           appBar: AppBar(
-            title: Text('EMI  Calculator',style: TextStyle(
+            title: const Text('EMI  Calculator',style: TextStyle(
               color: Colors.black
             ),),
             centerTitle: true,
