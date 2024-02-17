@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-
 void main() {
   runApp(const EMI());
 }
@@ -24,16 +23,16 @@ class _EMIState extends State<EMI> {
     double rateOfInterest = interestRate / 100 / 12;
     double numberOfPayments = loanTenure;
 
-    double emi = ((principal * rateOfInterest * pow(1 + rateOfInterest, numberOfPayments)) /
+    double emi = ((principal *
+            rateOfInterest *
+            pow(1 + rateOfInterest, numberOfPayments)) /
         (pow(1 + rateOfInterest, numberOfPayments) - 1)) as double;
-
 
     return emi;
   }
 
   @override
   Widget build(BuildContext context) {
-
     ThemeData(useMaterial3: true);
 
     double height = MediaQuery.of(context).size.height;
@@ -62,23 +61,37 @@ class _EMIState extends State<EMI> {
         body: Stack(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(vertical: 20),
+              padding: EdgeInsets.symmetric(vertical: 0),
               alignment: Alignment.topCenter,
               height: height,
               width: width,
               decoration: BoxDecoration(
                 color: Color(0xFF1A245C),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: Column(
                 children: [
-                  Text(
-                    '\u{20B9} ${emi.toStringAsFixed(2)}/Month',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 38,
-                      fontWeight: FontWeight.w600,
-                    ),
+                  Text('Your loan EMI is ',style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                  ),),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '\u{20B9} ${emi.toStringAsFixed(2)}',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 38,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                        child: Text('/Month',style: TextStyle(
+                          color: Colors.white70,
+                        ),),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -107,15 +120,18 @@ class _EMIState extends State<EMI> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Text('${loanAmount.toStringAsFixed(0)}',style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500
-                    ),),
+                    Text(
+                      '${loanAmount.toStringAsFixed(0)}',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
+                    ),
                     Slider(
                       value: loanAmount,
                       min: 0.0,
                       max: 200000.0,
+                      activeColor:  Color(0xFF1A245C),
                       divisions: 100,
                       onChanged: (value) {
                         setState(() {
@@ -123,9 +139,9 @@ class _EMIState extends State<EMI> {
                         });
                       },
                     ),
-
-                    const SizedBox(height: 50,),
-
+                    const SizedBox(
+                      height: 50,
+                    ),
                     const Text(
                       'Interest Rate:',
                       style: TextStyle(
@@ -134,24 +150,27 @@ class _EMIState extends State<EMI> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Text(' ${interestRate.toStringAsFixed(0)}%',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500
-                    ),),
+                    Text(
+                      ' ${interestRate.toStringAsFixed(0)}%',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
+                    ),
                     Slider(
                       value: interestRate,
                       min: 1.0,
                       max: 100.0,
+                      activeColor:  Color(0xFF1A245C),
                       onChanged: (value) {
                         setState(() {
                           interestRate = value;
                         });
                       },
                     ),
-
-                    SizedBox(height: 50,),
-
+                    SizedBox(
+                      height: 50,
+                    ),
                     Text(
                       'Loan Tenure: ',
                       style: TextStyle(
@@ -160,39 +179,61 @@ class _EMIState extends State<EMI> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Text('${loanTenure.toStringAsFixed(0)} Months',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500
-                    ),),
+                    Text(
+                      '${loanTenure.toStringAsFixed(0)} Months',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500),
+                    ),
                     Slider(
                       value: loanTenure,
                       min: 6.0,
                       max: 60.0,
+                      activeColor:  Color(0xFF1A245C),
                       onChanged: (value) {
                         loanTenure = value;
-                        setState(() {
-
-                        });
+                        setState(() {});
                       },
                     ),
 
+                    SizedBox(height: 60),
+
+                    InkWell(
+                      onTap: () {
+                        emi = calculateEMI();
+                        setState(() {});
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: height * 0.05,
+                        width: width * 0.4,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF1A245C),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
+                        child: Text(
+                          'Calculate',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600
+                          ),
+                        ),
+                      ),
+                    ),
                     SizedBox(height: 20),
 
-
-
-                    ElevatedButton(
-                      onPressed: () {
-                        emi = calculateEMI();
-                        setState(() {
-
-                        });
-                      },
-                      child: Text('Calculate',
-                      style: TextStyle(
-                        fontSize: 20
-                      ),),
-                    ),
+                    // ElevatedButton(
+                    //   onPressed: () {
+                    //     emi = calculateEMI();
+                    //     setState(() {});
+                    //   },
+                    //   child: Text(
+                    //     'Calculate',
+                    //     style: TextStyle(fontSize: 20),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
