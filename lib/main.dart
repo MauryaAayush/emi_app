@@ -208,7 +208,7 @@ class _EMIState extends State<EMI> {
                         alignment: Alignment.center,
                         height: height * 0.05,
                         width: width * 0.4,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xFF1A245C),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
