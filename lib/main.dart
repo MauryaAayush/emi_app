@@ -26,7 +26,7 @@ class _EMIState extends State<EMI> {
     double emi = ((principal *
             rateOfInterest *
             pow(1 + rateOfInterest, numberOfPayments)) /
-        (pow(1 + rateOfInterest, numberOfPayments) - 1)) as double;
+        (pow(1 + rateOfInterest, numberOfPayments) - 1));
 
     return emi;
   }
