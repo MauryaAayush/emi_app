@@ -171,7 +171,7 @@ class _EMIState extends State<EMI> {
                     const SizedBox(
                       height: 50,
                     ),
-                    Text(
+                    const Text(
                       'Loan Tenure: ',
                       style: TextStyle(
                         color: Colors.black54,
