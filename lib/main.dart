@@ -85,8 +85,8 @@ class _EMIState extends State<EMI> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
                         child: Text('/Month',style: TextStyle(
                           color: Colors.white70,
                         ),),
