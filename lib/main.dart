@@ -152,7 +152,7 @@ class _EMIState extends State<EMI> {
                     ),
                     Text(
                       ' ${interestRate.toStringAsFixed(0)}%',
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 18,
                           fontWeight: FontWeight.w500),
