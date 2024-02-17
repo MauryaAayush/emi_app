@@ -212,7 +212,7 @@ class _EMIState extends State<EMI> {
                             color: Color(0xFF1A245C),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20))),
-                        child: Text(
+                        child: const Text(
                           'Calculate',
                           style: TextStyle(
                             color: Colors.white,
