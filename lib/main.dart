@@ -168,7 +168,7 @@ class _EMIState extends State<EMI> {
                         });
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
                     Text(
