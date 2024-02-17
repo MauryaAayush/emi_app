@@ -79,7 +79,7 @@ class _EMIState extends State<EMI> {
                     children: [
                       Text(
                         '\u{20B9} ${emi.toStringAsFixed(2)}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 38,
                           fontWeight: FontWeight.w600,
