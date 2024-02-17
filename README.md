@@ -1,3 +1,9 @@
+
+
+<img src = "https://github.com/MauryaAayush/emi_app/assets/143180849/86ffebc6-c7f9-4516-9900-cbe2bfcc8420" height = 500px>
+
+
+
 # emi_app
 
 A new Flutter project.
