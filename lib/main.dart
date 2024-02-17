@@ -113,7 +113,6 @@ class _EMIState extends State<EMI> {
                       fontWeight: FontWeight.w500
                     ),),
                     Slider(
-
                       value: loanAmount,
                       min: 0.0,
                       max: 200000.0,
@@ -125,7 +124,7 @@ class _EMIState extends State<EMI> {
                       },
                     ),
 
-                    SizedBox(height: 50,),
+                    const SizedBox(height: 50,),
 
                     Text(
                       'Interest Rate:',
@@ -142,7 +141,7 @@ class _EMIState extends State<EMI> {
                     ),),
                     Slider(
                       value: interestRate,
-                      min: 0.0,
+                      min: 1.0,
                       max: 100.0,
                       onChanged: (value) {
                         setState(() {
