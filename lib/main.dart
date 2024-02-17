@@ -197,7 +197,7 @@ class _EMIState extends State<EMI> {
                       },
                     ),
 
-                    SizedBox(height: 60),
+                    const SizedBox(height: 60),
 
                     InkWell(
                       onTap: () {
