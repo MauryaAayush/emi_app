@@ -126,7 +126,7 @@ class _EMIState extends State<EMI> {
 
                     const SizedBox(height: 50,),
 
-                    Text(
+                    const Text(
                       'Interest Rate:',
                       style: TextStyle(
                         color: Colors.black54,
