@@ -61,7 +61,7 @@ class _EMIState extends State<EMI> {
         body: Stack(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(vertical: 0),
+              padding: const EdgeInsets.symmetric(vertical: 0),
               alignment: Alignment.topCenter,
               height: height,
               width: width,
