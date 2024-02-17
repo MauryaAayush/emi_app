@@ -131,7 +131,7 @@ class _EMIState extends State<EMI> {
                       value: loanAmount,
                       min: 0.0,
                       max: 200000.0,
-                      activeColor:  Color(0xFF1A245C),
+                      activeColor:  const Color(0xFF1A245C),
                       divisions: 100,
                       onChanged: (value) {
                         setState(() {
