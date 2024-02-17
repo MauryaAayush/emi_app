@@ -42,7 +42,7 @@ class _EMIState extends State<EMI> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF1A245C),
+          backgroundColor: const Color(0xFF1A245C),
           title: const Text(
             'EMI Calculator',
             style: TextStyle(
@@ -53,7 +53,7 @@ class _EMIState extends State<EMI> {
           ),
           centerTitle: true,
           toolbarHeight: 80,
-          leading: Icon(
+          leading: const Icon(
             Icons.grid_view,
             color: Colors.white,
           ),
