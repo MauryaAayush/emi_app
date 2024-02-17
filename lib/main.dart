@@ -111,7 +111,7 @@ class _EMIState extends State<EMI> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SizedBox(height: 50),
+                    const SizedBox(height: 50),
                     Text(
                       'Loan Amount',
                       style: TextStyle(
