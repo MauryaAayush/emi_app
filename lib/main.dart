@@ -65,7 +65,7 @@ class _EMIState extends State<EMI> {
               alignment: Alignment.topCenter,
               height: height,
               width: width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFF1A245C),
               ),
               child: Column(
