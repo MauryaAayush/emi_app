@@ -101,7 +101,7 @@ class _EMIState extends State<EMI> {
               child: Container(
                 height: height,
                 width: width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(50),
