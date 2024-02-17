@@ -70,7 +70,7 @@ class _EMIState extends State<EMI> {
               ),
               child: Column(
                 children: [
-                  Text('Your loan EMI is ',style: TextStyle(
+                  const Text('Your loan EMI is ',style: TextStyle(
                     color: Colors.white70,
                     fontSize: 15,
                   ),),
