@@ -222,7 +222,7 @@ class _EMIState extends State<EMI> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
 
                     // ElevatedButton(
                     //   onPressed: () {
