@@ -121,8 +121,8 @@ class _EMIState extends State<EMI> {
                       ),
                     ),
                     Text(
-                      '${loanAmount.toStringAsFixed(0)}',
-                      style: TextStyle(
+                      loanAmount.toStringAsFixed(0),
+                      style: const TextStyle(
                           color: Colors.black,
                           fontSize: 18,
                           fontWeight: FontWeight.w500),
